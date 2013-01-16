@@ -42,7 +42,7 @@ public abstract class SynccitTask extends HttpPostTask<SynccitResponse> {
 			return null;
 		}
 		
-		String data = null;
+		String data;
 		try {
 			data = buildJson(linkIds);
 		} catch (Exception e) {
