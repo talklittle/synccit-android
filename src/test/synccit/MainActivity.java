@@ -18,6 +18,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		new MySynccitUpdateTask().execute("16noez");
+		
 		new Handler().postDelayed(new Runnable() {
 			@Override public void run() {
 				new MySynccitReadTask(MainActivity.this).execute("16noez", "16nodo");
