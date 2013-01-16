@@ -9,6 +9,15 @@ interface with synccit.
 #### [synccit on github][2]
 
 
+Using the library
+=================
+
+You can drop the synccit-android jar into your project's `libs` directory.
+Or copy the files from `com.synccit.android` into your Android project.
+
+There is test code included in the [test.synccit package][3].
+
+
 Developed By
 ============
 
@@ -34,3 +43,4 @@ License
 
  [1]: http://synccit.com
  [2]: https://github.com/drakeapps/synccit
+ [3]: https://github.com/talklittle/synccit-android/tree/master/src/test/synccit
