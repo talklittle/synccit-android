@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/thread_id1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="16noez" />
+
+    <TextView
+        android:id="@+id/visited1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@id/thread_id1"
+        android:text="visited???" />
+
+    <TextView
+        android:id="@+id/thread_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/thread_id1"
+        android:text="16nodo" />
+
+    <TextView
+        android:id="@+id/visited2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/visited1"
+        android:layout_toRightOf="@id/thread_id2"
+        android:text="visited???" />
+
+</RelativeLayout>

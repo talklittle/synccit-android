@@ -2,9 +2,10 @@ package com.synccit.android;
 
 import java.io.InputStream;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Scanner;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public abstract class SynccitReadTask extends SynccitTask {
@@ -28,22 +29,23 @@ public abstract class SynccitReadTask extends SynccitTask {
 		Scanner s = new Scanner(in);
 		String json = s.useDelimiter("\\A").next();
 		
-		JSONObject node = new JSONObject(json);
-		if (node.has("error")) {
-			return new SynccitResponse("error", node.get("error").toString());
+		try {
+			JSONArray links = new JSONArray(json);
+			
+			int length = links.length();
+			for (int i = 0; i < length; i++) {
+				JSONObject linkNode = (JSONObject) links.get(i);
+				visitedLinkIds.add(linkNode.get("id").toString());
+			}
+			
+			onVisited(visitedLinkIds);
+
+		} catch (JSONException ex) {
+			JSONObject node = new JSONObject(json);
+			if (node.has("error")) {
+				return new SynccitResponse("error", node.get("error").toString());
+			}
 		}
-		
-		@SuppressWarnings("rawtypes")
-		Iterator keys = node.keys();
-		
-		while (keys.hasNext()) {
-			String key = keys.next().toString();
-			JSONObject linkNode = (JSONObject) node.get(key);
-			visitedLinkIds.add(linkNode.get("id").toString());
-		}
-		
-		onVisited(visitedLinkIds);
-		
 		return null;
 	}
 	

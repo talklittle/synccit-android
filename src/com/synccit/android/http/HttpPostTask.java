@@ -1,6 +1,5 @@
 package com.synccit.android.http;
 
-import java.beans.PropertyChangeListener;
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -19,7 +18,7 @@ import org.apache.http.protocol.HTTP;
 import android.os.AsyncTask;
 import android.util.Log;
 
-public abstract class HttpPostTask<Result> extends AsyncTask<String, Long, Result> implements PropertyChangeListener {
+public abstract class HttpPostTask<Result> extends AsyncTask<String, Long, Result> {
 	
 	private static final String TAG = HttpPostTask.class.getSimpleName();
 	
