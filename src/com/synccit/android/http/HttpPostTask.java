@@ -97,9 +97,6 @@ public abstract class HttpPostTask<Result> extends AsyncTask<String, Long, Resul
 		return nvps;
 	}
 	
-	/**
-	 * Default behavior parses response, checks for errors returned by reddit.
-	 */
 	protected Result onInput(InputStream in) throws Exception {
 		return null;
 	}

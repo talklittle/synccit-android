@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 import org.json.JSONObject;
 
+/**
+ * https://github.com/drakeapps/synccit#example-json-update-call
+ */
 public abstract class SynccitUpdateTask extends SynccitTask {
 
 	@SuppressWarnings("unused")

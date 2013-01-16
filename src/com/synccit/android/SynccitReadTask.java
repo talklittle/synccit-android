@@ -8,6 +8,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * https://github.com/drakeapps/synccit#example-json-read-call
+ */
 public abstract class SynccitReadTask extends SynccitTask {
 	
 	private static final String READ_MODE = "read";
