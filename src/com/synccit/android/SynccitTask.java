@@ -35,6 +35,11 @@ public abstract class SynccitTask extends HttpPostTask<SynccitResponse> {
 		this.devName = devName;
 	}
 
+	public SynccitTask(String devName, String apiUrl) {
+		super(apiUrl);
+		this.devName = devName;
+	}
+
 	@Override
 	protected SynccitResponse doInBackground(String... linkIds) {
 		if (TextUtils.isEmpty(getUsername()) || TextUtils.isEmpty(getAuth())) {
