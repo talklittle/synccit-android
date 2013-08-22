@@ -22,8 +22,8 @@ public abstract class HttpPostTask<Result> extends AsyncTask<String, Long, Resul
 	
 	private static final String TAG = HttpPostTask.class.getSimpleName();
 	
-	protected static final int CONNECTION_TIMEOUT_MILLIS = 45000;
-	protected static final int SOCKET_TIMEOUT_MILLIS = 45000;
+	protected static final int CONNECTION_TIMEOUT_MILLIS = 5000;
+	protected static final int SOCKET_TIMEOUT_MILLIS = 20000;
 	
 	protected final HttpClient mClient = HttpClientFactory.getGzipHttpClient();
 	
